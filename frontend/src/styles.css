@@ -1,0 +1,49 @@
+:root {
+  --bg: #f4f5f8;
+  --card: #ffffff;
+  --text: #1b1f2a;
+  --muted: #667085;
+  --border: #e1e4ea;
+  --accent: #3b5bdb;
+  --danger: #c92a2a;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+
+.app { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+.top h1 { margin: 0; }
+.muted { color: var(--muted); font-size: 0.9rem; margin: 4px 0; }
+.layout { display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.form { display: flex; flex-direction: column; gap: 12px; }
+.form h2 { margin: 0; font-size: 1.1rem; }
+.row { display: flex; gap: 12px; }
+.row label { flex: 1; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; font-weight: 600; }
+input, textarea, select { font: inherit; padding: 8px; border: 1px solid var(--border); border-radius: 6px; }
+
+button { font: inherit; padding: 8px 14px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: default; }
+button.danger { background: var(--danger); }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.toolbar h2 { margin: 0; font-size: 1.1rem; }
+
+.item header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.item h3 { margin: 0; font-size: 1.05rem; }
+.item footer { display: flex; gap: 8px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+
+.badge { font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--border); }
+.priority-high { background: #ffe8cc; }
+.priority-urgent { background: #ffc9c9; }
+.badge.category { background: #dbe4ff; }
+
+.ai { background: #f1f3ff; border-left: 3px solid var(--accent); border-radius: 6px; padding: 10px 12px; margin-top: 8px; }
+.ai-head { display: flex; gap: 8px; align-items: center; }
+.ai pre { white-space: pre-wrap; font: inherit; margin: 4px 0 0; }
+
+.error { background: #ffe3e3; color: var(--danger); padding: 10px 14px; border-radius: 6px; margin: 16px 0; }
